@@ -18,7 +18,7 @@ class Solution {
 		int diff = a - b;
 		if (diff < 0) {
 			return true;
-		}one
+		}
 		return false;
 	}
 
