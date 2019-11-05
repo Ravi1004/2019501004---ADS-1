@@ -1,3 +1,4 @@
+
 public class Solution {
 	private MyNode head;
 	private MyNode tail;
@@ -8,20 +9,31 @@ public class Solution {
 		this.tail = null;
 		this.size = 0;
 	}
-
+/**.
+ *
+ * @param a
+ * @param b
+ * @return
+ */
 	public static String Josephus(final int a, final int b) {
 		Solution sol = new Solution();
-		sol.generateOrder(a - 1);
+		sol.Order(a - 1);
 		String removed = sol.remove(b);
 		return removed;
 	}
-
-	private void generateOrder(final int a) {
+/**.
+ *
+ * @param a
+ */
+	private void Order(final int a) {
 		for (int i = a; i >= 0; i--) {
 			this.insert(String.valueOf(i));
 		}
 	}
-
+/***.
+ *
+ * @param data
+ */
 	public void insert(final String data) {
 
 		MyNode firstNode = new MyNode(data);
