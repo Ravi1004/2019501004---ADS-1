@@ -94,7 +94,6 @@ public class LinearProbingHashST<Key extends Comparable<Key>, Value> {
         // rehash all keys in same cluster
         i = (i + 1) % m;
         while (keys[i] != null) {
-            // delete keys[i] an vals[i] and reinsert
             Key keyToRehash = keys[i];
             Value valToRehash = vals[i];
             keys[i] = null;
@@ -123,7 +122,6 @@ public class LinearProbingHashST<Key extends Comparable<Key>, Value> {
     }
 
     private int hash(Key key) {
-        // System.out.println(key.hashCode());
         return (key.hashCode() & 0x7fffffff) % m;
     }
 

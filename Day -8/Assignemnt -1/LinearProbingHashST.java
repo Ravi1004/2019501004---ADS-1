@@ -209,18 +209,17 @@ class LinearProbingHashST<Key, Value> {
         Scanner s = new Scanner(System.in);
         String input = s.nextLine();
         int spaceCount = 0;
-        // System.out.println(input);
+
 
         for (char c : input.toCharArray()) {
             if (c == ' ') {
                 spaceCount++;
             }
         }
-        // System.out.println(spaceCount);
+\
 
         String[] arrOfStr = new String[spaceCount + 1];
         arrOfStr = input.split(" ", 10);
-        // System.out.println(Arrays.toString(arrOfStr));
         boolean a = false;
         for (int i = 0; i < arrOfStr.length; i++) {
             if (!st.contains(arrOfStr[i])) {
