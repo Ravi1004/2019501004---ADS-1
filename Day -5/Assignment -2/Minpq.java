@@ -1,5 +1,8 @@
 import java.util.Comparator;
-// author : k.sandhya
+/**
+ * @aythor Ravi
+ * @param <Key>
+ */
 public class Minpq<Key extends Comparable<Key>> { // perform minpq operation
     private Key[] pq;
     private int size;
