@@ -7,10 +7,10 @@ import java.util.*;
 class LinearProbingHashST<Key, Value> {
     private static final int INIT_CAPACITY = 4;
 
-    private int n; // number of key-value pairs in the symbol table
-    private int m; // size of linear probing table
-    private Key[] keys; // the keys
-    private Value[] vals; // the values
+    private int n;
+    private int m;
+    private Key[] keys;
+    private Value[] vals;
 
     /**
      * Initializes an empty symbol table.
@@ -216,7 +216,7 @@ class LinearProbingHashST<Key, Value> {
                 spaceCount++;
             }
         }
-\
+
 
         String[] arrOfStr = new String[spaceCount + 1];
         arrOfStr = input.split(" ", 10);

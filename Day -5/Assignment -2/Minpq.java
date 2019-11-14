@@ -3,11 +3,11 @@ import java.util.Comparator;
  * @aythor Ravi
  * @param <Key>
  */
-public class Minpq<Key extends Comparable<Key>> { // perform minpq operation
+public class Minpq<Key extends Comparable<Key>> {
     private Key[] pq;
     private int size;
     private Comparator<Key> comparator;
-    public Minpq(final int capacity) {// requires capacity to perform operations.
+    public Minpq(final int capacity) {
         pq = (Key[]) new Comparable[capacity + 1];
     }
 
