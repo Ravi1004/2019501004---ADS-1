@@ -15,7 +15,7 @@ class Farthest {
             arr[i] = s.nextDouble();
         }
         System.out.println("Min element " + min(arr));
-        System.out.println("Min element " + max(arr));
+        System.out.println("Man element " + max(arr));
 
     }
 
