@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "ADS-1_69a4d1e1"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "pra.Test",
+            "projectName": "ADS-1_69a4d1e1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BinarySearchST",
             "request": "launch",
             "mainClass": "BinarySearchST",
