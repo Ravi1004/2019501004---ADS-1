@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BinarySearchST",
+            "request": "launch",
+            "mainClass": "BinarySearchST",
+            "projectName": "Day 5_72b45eaa"
+        }
+    ]
+}
