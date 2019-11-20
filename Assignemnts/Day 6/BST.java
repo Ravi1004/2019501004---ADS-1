@@ -286,74 +286,74 @@ public class BST<Key extends Comparable<Key>, Value> {
             return size(x.left);
     }
 
-    public Iterable<Key> keys() {
-        if (isEmpty())
-            return new Queue<Key>();
-        return keys(min(), max());
-    }
+    // public Iterable<Key> keys() {
+    //     if (isEmpty())
+    //         return new Queue<Key>();
+    //     return keys(min(), max());
+    // }
 
-    public Iterable<Key> keys(Key lo, Key hi) {
-        if (lo == null)
-            throw new IllegalArgumentException("first argument to keys() is null");
-        if (hi == null)
-            throw new IllegalArgumentException("second argument to keys() is null");
+    // public Iterable<Key> keys(Key lo, Key hi) {
+    //     if (lo == null)
+    //         throw new IllegalArgumentException("first argument to keys() is null");
+    //     if (hi == null)
+    //         throw new IllegalArgumentException("second argument to keys() is null");
 
-        Queue<Key> queue = new Queue<Key>();
-        keys(root, queue, lo, hi);
-        return queue;
-    }
+    //     Queue<Key> queue = new Queue<Key>();
+    //     keys(root, queue, lo, hi);
+    //     return queue;
+    // }
 
-    private void keys(Node x, Queue<Key> queue, Key lo, Key hi) {
-        if (x == null)
-            return;
-        int cmplo = lo.compareTo(x.key);
-        int cmphi = hi.compareTo(x.key);
-        if (cmplo < 0)
-            keys(x.left, queue, lo, hi);
-        if (cmplo <= 0 && cmphi >= 0)
-            queue.enqueue(x.key);
-        if (cmphi > 0)
-            keys(x.right, queue, lo, hi);
-    }
+    // private void keys(Node x, Queue<Key> queue, Key lo, Key hi) {
+    //     if (x == null)
+    //         return;
+    //     int cmplo = lo.compareTo(x.key);
+    //     int cmphi = hi.compareTo(x.key);
+    //     if (cmplo < 0)
+    //         keys(x.left, queue, lo, hi);
+    //     if (cmplo <= 0 && cmphi >= 0)
+    //         queue.enqueue(x.key);
+    //     if (cmphi > 0)
+    //         keys(x.right, queue, lo, hi);
+    // }
 
-    public int size(Key lo, Key hi) {
-        if (lo == null)
-            throw new IllegalArgumentException("first argument to size() is null");
-        if (hi == null)
-            throw new IllegalArgumentException("second argument to size() is null");
+    // public int size(Key lo, Key hi) {
+    //     if (lo == null)
+    //         throw new IllegalArgumentException("first argument to size() is null");
+    //     if (hi == null)
+    //         throw new IllegalArgumentException("second argument to size() is null");
 
-        if (lo.compareTo(hi) > 0)
-            return 0;
-        if (contains(hi))
-            return rank(hi) - rank(lo) + 1;
-        else
-            return rank(hi) - rank(lo);
-    }
+    //     if (lo.compareTo(hi) > 0)
+    //         return 0;
+    //     if (contains(hi))
+    //         return rank(hi) - rank(lo) + 1;
+    //     else
+    //         return rank(hi) - rank(lo);
+    // }
 
-    public int height() {
-        return height(root);
-    }
+    // public int height() {
+    //     return height(root);
+    // }
 
-    private int height(Node x) {
-        if (x == null)
-            return -1;
-        return 1 + Math.max(height(x.left), height(x.right));
-    }
+    // private int height(Node x) {
+    //     if (x == null)
+    //         return -1;
+    //     return 1 + Math.max(height(x.left), height(x.right));
+    // }
 
-    public Iterable<Key> levelOrder() {
-        Queue<Key> keys = new Queue<Key>();
-        Queue<Node> queue = new Queue<Node>();
-        queue.enqueue(root);
-        while (!queue.isEmpty()) {
-            Node x = queue.dequeue();
-            if (x == null)
-                continue;
-            keys.enqueue(x.key);
-            queue.enqueue(x.left);
-            queue.enqueue(x.right);
-        }
-        return keys;
-    }
+    // public Iterable<Key> levelOrder() {
+    //     Queue<Key> keys = new Queue<Key>();
+    //     Queue<Node> queue = new Queue<Node>();
+    //     queue.enqueue(root);
+    //     while (!queue.isEmpty()) {
+    //         Node x = queue.dequeue();
+    //         if (x == null)
+    //             continue;
+    //         keys.enqueue(x.key);
+    //         queue.enqueue(x.left);
+    //         queue.enqueue(x.right);
+    //     }
+    //     return keys;
+    // }
 
     private boolean isBST() {
         return isBST(root, null, null);
@@ -381,15 +381,15 @@ public class BST<Key extends Comparable<Key>, Value> {
         return isSizeConsistent(x.left) && isSizeConsistent(x.right);
     }
 
-    private boolean isRankConsistent() {
-        for (int i = 0; i < size(); i++)
-            if (i != rank(select(i)))
-                return false;
-        for (Key key : keys())
-            if (key.compareTo(select(rank(key))) != 0)
-                return false;
-        return true;
-    }
+    // private boolean isRankConsistent() {
+    //     for (int i = 0; i < size(); i++)
+    //         if (i != rank(select(i)))
+    //             return false;
+    //     for (Key key : keys())
+    //         if (key.compareTo(select(rank(key))) != 0)
+    //             return false;
+    //     return true;
+    // }
 
     public static void main(String[] args) {
         BST<Integer, String> b = new BST<Integer, String>();
