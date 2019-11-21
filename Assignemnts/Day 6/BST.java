@@ -1,4 +1,5 @@
 import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class BST<Key extends Comparable<Key>, Value> {
     private Node root; // root of BST
@@ -393,13 +394,20 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     public static void main(String[] args) {
         BST<Integer, String> b = new BST<Integer, String>();
-        b.root = new BST<Integer, String>().new Node(2, "abc",1);
-        b.root.left = new BST<Integer, String>().new Node(1, "avc",2);
-        b.root.right = new BST<Integer, String>().new Node(11, "avc",3);
-        b.root.left.left = new BST<Integer, String>().new Node(55, "avc",4);
-        b.root.right.right = new BST<Integer, String>().new Node(45, "avc",5);
-        b.root.left.right = new BST<Integer, String>().new Node(105, "avc",6);
-        b.root.right.left = new BST<Integer, String>().new Node(115, "avc",7);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Make a tree structure : ");
+        System.out.println("Enter the node key and value : ");
+        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        System.out.println("Enter the node key and value : ");
+        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        System.out.println("Enter the node key and value : ");
+        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        System.out.println("Enter the node key and value : ");
+        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        System.out.println("Enter the node key and value : ");
+        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        System.out.println("Enter the node key and value : ");
+        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
 
 
 
