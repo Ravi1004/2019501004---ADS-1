@@ -1,6 +1,5 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import javax.xml.soap.Node;
 
 /**.
  * @author Ravi
@@ -46,7 +45,7 @@ public class Deque<Item> implements Iterable<Item> {
      * This is the constructor for dequeue
      *
      */
-    Deque() {
+    public Deque() {
         first = null;
         last  = null;
         n = 0;
@@ -78,15 +77,18 @@ public class Deque<Item> implements Iterable<Item> {
      * @param item item will be inserted in the node
      */
     public void addFirst(final Item item) {
+        if (null == item) {
+            throw new IllegalArgumentException();
+        }
         if (n == 0) {
-            Node nd = new Node();
+            Node<Item> nd = new Node<Item>();
             nd.item = item;
             first = nd;
             last = nd;
             n++;
         } else {
-            Node temp = first;
-            Node nd = new Node();
+            Node<Item> temp = first;
+            Node<Item> nd = new Node<Item>();
             nd.item = item;
             nd.next = temp;
             temp.previous = nd;
@@ -101,15 +103,18 @@ public class Deque<Item> implements Iterable<Item> {
      * @param item item will be added at the last
      */
     public void addLast(final Item item) {
+        if (null == item) {
+            throw new IllegalArgumentException();
+        }
         if (n == 0) {
-            Node nd = new Node();
+            Node<Item> nd = new Node<Item>();
             nd.item = item;
             last = nd;
             first = nd;
             n++;
         } else {
-            Node temp = last;
-            Node nd = new Node();
+            Node<Item> temp = last;
+            Node<Item> nd = new Node<Item>();
             nd.item = item;
             nd.previous = temp;
             temp.next = nd;
@@ -203,9 +208,9 @@ public class Deque<Item> implements Iterable<Item> {
             return current != null;
         }
 
-        // public void remove() {
-        //     throw new UnsupportedOperationException();
-        // }
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
         /**.
          * This is the next method which will retun the item
          * and moves to the next item
