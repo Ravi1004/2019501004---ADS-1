@@ -25,12 +25,14 @@ class Test {
             cards[rand] = cards[i];
             cards[i] = temp;
         }
+
         for (int j = 0; j < 4; j++) {
             for (int k = 1; k <= 13; k++) {
                 cards[pos] = new Card(k, j);
                 pos++;
             }
         }
+
         System.out.println("Before sorting");
         for (int i = 0; i < pos; i++) {
             System.out.println(cards[i]);
