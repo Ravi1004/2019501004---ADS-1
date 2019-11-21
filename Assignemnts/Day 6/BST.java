@@ -399,15 +399,18 @@ public class BST<Key extends Comparable<Key>, Value> {
         System.out.println("Enter the node key and value : ");
         b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
         System.out.println("Enter the node key and value : ");
-        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        b.root.left = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
         System.out.println("Enter the node key and value : ");
-        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        b.root.right = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
         System.out.println("Enter the node key and value : ");
-        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        b.root.left.left = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
         System.out.println("Enter the node key and value : ");
-        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        b.root.right.right = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
         System.out.println("Enter the node key and value : ");
-        b.root = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+        b.root.left.right = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
+
+        System.out.println("Enter the node key and value : ");
+        b.root.right.left = new BST<Integer, String>().new Node(sc.nextInt(), sc.next(), sc.nextInt());
 
 
 
